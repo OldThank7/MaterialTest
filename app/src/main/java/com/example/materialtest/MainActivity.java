@@ -24,6 +24,7 @@ import java.util.Random;
 
 
 public class MainActivity extends AppCompatActivity {
+    private String TAG = "MaterialTest";
     private Toolbar toolbar;
     private DrawerLayout mDrawerLoyout;
     private Fruit[] fruits = {new Fruit("Apple",R.drawable.ic_1)
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         initfab();
         initFruit();
         initSwiperRefresh();
+        LogUtil.d(TAG,"初始化操作完成");
     }
 
     private void initSwiperRefresh() {
@@ -187,4 +189,33 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        LogUtil.d(TAG, "活动由不可见变为可见");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        LogUtil.d(TAG,"重新启动");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        LogUtil.d(TAG,"资源释放");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        LogUtil.d(TAG,"活动完全不可见");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        LogUtil.d(TAG,"销毁");
+    }
 }
