@@ -27,14 +27,16 @@ public class MainActivity extends AppCompatActivity {
     private String TAG = "MaterialTest";
     private Toolbar toolbar;
     private DrawerLayout mDrawerLoyout;
-    private Fruit[] fruits = {new Fruit("Apple",R.drawable.ic_1)
-            ,new Fruit("Banana",R.drawable.ic_2)
-            ,new Fruit("0range",R.drawable.ic_3)
-            ,new Fruit("Watermelon",R.drawable.ic_4)
-            ,new Fruit("Pear",R.drawable.ic_5)
-            ,new Fruit("Grape",R.drawable.ic_6)
-            ,new Fruit("Pineapple",R.drawable.ic_7)
-            ,new Fruit("Strawberry",R.drawable.ic_8)};
+    private Fruit[] fruits = {
+//            new Fruit("Apple",R.drawable.ic_1)
+//            ,new Fruit("Banana",R.drawable.ic_2)
+//            ,new Fruit("0range",R.drawable.ic_3)
+//            ,new Fruit("Watermelon",R.drawable.ic_4)
+//            ,new Fruit("Pear",R.drawable.ic_5)
+//            ,new Fruit("Grape",R.drawable.ic_6)
+//            ,new Fruit("Pineapple",R.drawable.ic_7)
+//            ,new Fruit("Strawberry",R.drawable.ic_8)
+    };
 
     List<Fruit> fruitList = new ArrayList<>();
     FruitAdapter adapter;
